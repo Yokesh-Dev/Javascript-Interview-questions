@@ -1,5 +1,16 @@
 <h1>JavaScript basics Interview questions answers with Code.</h1>
 
+<h2>Read Me First</h2>
+<h4>
+  Working in Javascript and cracking Javascript interviews are two different things.
+  Interview is all about expressing your answers in a precise and proper way.You may know well but need to explain well in Interviews.
+  Answer breifly to the point!
+   PPP- Be Practical , Be to the Point, Be Prepared ☑️
+
+
+</h4>
+
+
 
 
 Question 1 :- Why do we call JavaScript as dynamic language
