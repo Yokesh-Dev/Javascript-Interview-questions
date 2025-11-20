@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function Supplier(){
+        //     this.name="Shiv";
+        //     this.code="";
+        //     this.Show= function(){
+        //         alert(this.name);
+        //     }
+        // }
+        // Supplier();
+        // alert(this.name);
+        // alert(this.Show());
+        // var supp = new Supplier();
+
+        class Supplier{
+            constructor(_name,_code){
+                this.name=_name;
+                this.code=_code;
+            }
+            Show(){
+                alert(this.name);
+            }
+        }
+        Supplier();
+        var o = new Supplier();
+        var o1 = new Supplier();
+    </script>
+</body>
+</html>

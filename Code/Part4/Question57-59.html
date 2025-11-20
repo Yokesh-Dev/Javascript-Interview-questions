@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var prom = new Promise(
+                function(resolve,reject){
+                    setTimeout(() => {
+                        console.log("Set time out executed");
+                        if(Math.random()>0.3 && Math.random()<0.5){
+                                throw new Error("Some error");
+                        }
+                        if(Math.random()>0.5){
+                            resolve("finished value123");
+                        }
+                        else{
+                            reject("Reject value 345")
+                        }
+                    
+                    }, 5000);
+    });
+    prom.
+        then(this.Resolve,this.Reject)
+        .catch(this.Error);
+    console.log("We do not wait...");
+    function Resolve(value){
+        console.log("Success call back " + value);
+    }
+    function Reject(value){
+        console.log("Reject call back " + value);
+    }
+    function Error(value){
+        console.log("Caught in promise chain " + value);
+    }
+    </script>
+</body>
+</html>

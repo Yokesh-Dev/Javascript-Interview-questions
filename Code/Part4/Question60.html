@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var prom = new Promise(
+                function(resolve,reject){
+                    setTimeout(() => {
+                        console.log("Asynch 1");
+                        resolve("");
+                    }, 5000);
+                    
+    });
+    prom.
+        then(this.Resolve,this.Reject)
+        .then(this.nextResolve);
+        console.log("Main thread executed...");
+
+    function Resolve(value){
+       
+        var prom = new Promise(
+            function(resolve,reject){
+                setTimeout(() => {
+                console.log("Asynch 2");
+                resolve("");
+            }, 5000);
+        });
+        return prom;
+    };
+    
+    function nextResolve(value){
+       
+        var prom = new Promise(
+            function(resolve,reject){
+            setTimeout(() => {
+                console.log("Asynch 3");
+                resolve("");
+            }, 5000);
+        });
+        return prom;
+    };
+   
+    </script>
+</body>
+</html>

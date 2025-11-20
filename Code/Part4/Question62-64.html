@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var prom = new Promise(
+                function(resolve,reject){
+                    setTimeout(() => {
+                        resolve("Data from Promise");
+                    }, 10000);
+                    
+    });
+    // prom.then(this.Resolve,this.Reject);
+    // console.log("Execute After promise");
+    async function AsynchWrapper() {
+            let data = await prom;
+            console.log(data);
+            console.log("Execute After promise");
+    }
+    AsynchWrapper();
+    async function fun1(){
+        return ""; // promise
+    }
+    
+    function Resolve(value){
+       console.log(value);
+    
+    };
+    
+    function Reject(value){
+        console.log(value);
+    };
+   
+    </script>
+</body>
+</html>

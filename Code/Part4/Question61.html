@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var prom = new Promise(
+                function(resolve,reject){
+                    console.log("Pending...")
+                    setTimeout(() => {
+                        if(Math.random()>0.5){
+                            resolve("");
+                        }
+                        else{
+                            reject("")
+                        }
+                    }, 10000);
+                    
+    });
+    prom.
+        then(this.Resolve,this.Reject);
+     
+
+    function Resolve(value){
+       console.log("Resolved");
+    
+    };
+    
+    function Reject(value){
+        console.log("Rejected");
+    };
+   
+    </script>
+</body>
+</html>

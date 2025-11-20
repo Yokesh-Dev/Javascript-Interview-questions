@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       
+            function method(way){
+                console.log(way + this);
+            }
+            const myObject = {
+                method(way) {
+                    var arrow = (way) => { console.log( way + this);};
+                    arrow(way);
+                }
+            };
+        // Normal method call
+        method("Normal method ");
+        // constructor method call
+        var f = new method("Constructor  method ");
+        // using call or bind
+        method.call(f, "Call method ");
+        var arrow = (way) => { console.log(way + this);};
+        arrow("normal arrow ");
+        myObject.method("indirect arrow ");
+        t = new arrow("constructor arrow");
+
+   </script>
+</body>
+</html>

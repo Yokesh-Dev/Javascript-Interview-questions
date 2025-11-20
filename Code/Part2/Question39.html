@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Add(val1,val2){
+            return val1+val2;
+        }
+        var output = Add(10,10);
+
+        var Sum = (val1,val2)=> val1+val2;
+        output =Sum(10,10);
+        
+        var students = [
+        { id: 20, name: 'Shiv' , marks:80 },
+        { id: 24, name: 'Khadak' , marks:90},
+        { id: 56, name: 'Guru', marks:60 },
+        { id: 88, name: 'Lalita', marks:100 },
+        {id: 81, name: 'Sumesh', marks:90 },
+        {id: 46, name: 'Rohit' , marks:70}
+        ];
+        var final = students.filter(e=> e.name.startsWith("S"));
+        final = students.filter(e=> e.id>50 );
+        final = students.filter(e=> e.marks>70 && e.marks<90 );
+        final = students.map(e=> {
+                            if(e.marks>80){
+                                console.log(this);
+                                 return ({"name" : e.name,"grade" :"Distinction"}) 
+                            }
+                            else{
+                                return ({"name" : e.name,"grade" :"Passed"}) 
+                            }
+                        })
+
+    </script>
+</body>
+</html>
